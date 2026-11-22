@@ -1,0 +1,2370 @@
+fileFormatVersion: 2
+guid: 96c5131d86ba5d94b9c7ed9b8a9fcbb4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5460987845674898186
+    second: boss neco_0
+  - first:
+      213: -1409234894302817986
+    second: boss neco_1
+  - first:
+      213: 1323245241948698648
+    second: boss neco_2
+  - first:
+      213: -7680957175078166702
+    second: boss neco_3
+  - first:
+      213: -6125004765612341648
+    second: boss neco_4
+  - first:
+      213: -5555678802117489321
+    second: boss neco_5
+  - first:
+      213: 5528644203495019185
+    second: boss neco_6
+  - first:
+      213: 4325496897993584048
+    second: boss neco_7
+  - first:
+      213: 9019086567122244273
+    second: boss neco_8
+  - first:
+      213: -2646607693208061259
+    second: boss neco_9
+  - first:
+      213: -7813237823090085931
+    second: boss neco_10
+  - first:
+      213: 6685276360394649147
+    second: boss neco_11
+  - first:
+      213: 504637940194930283
+    second: boss neco_12
+  - first:
+      213: 3949382963398611404
+    second: boss neco_13
+  - first:
+      213: 1162735126229807302
+    second: boss neco_14
+  - first:
+      213: -696489140986991686
+    second: boss neco_15
+  - first:
+      213: 7301393497631719136
+    second: boss neco_16
+  - first:
+      213: 2486352060039748277
+    second: boss neco_17
+  - first:
+      213: 5527385761259112977
+    second: boss neco_18
+  - first:
+      213: 8125414012222249110
+    second: boss neco_19
+  - first:
+      213: 1427734950889027946
+    second: boss neco_20
+  - first:
+      213: -1745010772927203520
+    second: boss neco_21
+  - first:
+      213: -1056073776856906166
+    second: boss neco_22
+  - first:
+      213: -3986384195653613578
+    second: boss neco_23
+  - first:
+      213: -6178410342248710799
+    second: boss neco_24
+  - first:
+      213: -7011674214435591245
+    second: boss neco_25
+  - first:
+      213: 37810848896893723
+    second: boss neco_26
+  - first:
+      213: 1793206046399302024
+    second: boss neco_27
+  - first:
+      213: -7178072258210150056
+    second: boss neco_28
+  - first:
+      213: 2653277461076374993
+    second: boss neco_29
+  - first:
+      213: -6456443274402596917
+    second: boss neco_30
+  - first:
+      213: -6371062795335472539
+    second: boss neco_31
+  - first:
+      213: 4105239295279350302
+    second: boss neco_32
+  - first:
+      213: 6262398269263566629
+    second: boss neco_33
+  - first:
+      213: 8170895666184003371
+    second: boss neco_34
+  - first:
+      213: -2371352200578745371
+    second: boss neco_35
+  - first:
+      213: -946680979538336833
+    second: boss neco_36
+  - first:
+      213: 8922913851276425785
+    second: boss neco_37
+  - first:
+      213: -3862106395689113759
+    second: boss neco_38
+  - first:
+      213: 3782648093996922221
+    second: boss neco_39
+  - first:
+      213: 1503868477738653445
+    second: boss neco_40
+  - first:
+      213: 7330478515576005861
+    second: boss neco_41
+  - first:
+      213: 3323643123081804543
+    second: boss neco_42
+  - first:
+      213: 101844264945796126
+    second: boss neco_43
+  - first:
+      213: -5426703178367674925
+    second: boss neco_44
+  - first:
+      213: 4183338527721908689
+    second: boss neco_45
+  - first:
+      213: -4179702214544208155
+    second: boss neco_46
+  - first:
+      213: 8935836931331668530
+    second: boss neco_47
+  - first:
+      213: 1031187511844106937
+    second: boss neco_48
+  - first:
+      213: -6016893567264854905
+    second: boss neco_49
+  - first:
+      213: -5183087384864054710
+    second: boss neco_50
+  - first:
+      213: -9151768709886259142
+    second: boss neco_51
+  - first:
+      213: -7582769210274446389
+    second: boss neco_52
+  - first:
+      213: -7677812812569462694
+    second: boss neco_53
+  - first:
+      213: -945358048702634285
+    second: boss neco_54
+  - first:
+      213: -7878187379374574220
+    second: boss neco_55
+  - first:
+      213: 7972416929475322603
+    second: boss neco_56
+  - first:
+      213: 2768012389740484479
+    second: boss neco_57
+  - first:
+      213: 8251594595309934496
+    second: boss neco_58
+  - first:
+      213: 2449496547290750391
+    second: boss neco_59
+  - first:
+      213: -3032518383139296807
+    second: boss neco_60
+  - first:
+      213: -4028793442102713146
+    second: boss neco_61
+  - first:
+      213: 3389984954708296989
+    second: boss neco_62
+  - first:
+      213: -8668306543149518508
+    second: boss neco_63
+  - first:
+      213: 7301989750481337112
+    second: boss neco_64
+  - first:
+      213: 6570777471062504854
+    second: boss neco_65
+  - first:
+      213: 5458230682123208245
+    second: boss neco_66
+  - first:
+      213: 3700753817986177335
+    second: boss neco_67
+  - first:
+      213: 6996698488231474757
+    second: boss neco_68
+  - first:
+      213: -278808669032994770
+    second: boss neco_69
+  - first:
+      213: -3045043946342471289
+    second: boss neco_70
+  - first:
+      213: -6466408244447541809
+    second: boss neco_71
+  - first:
+      213: 3305127656278390179
+    second: boss neco_72
+  - first:
+      213: 32767297498573287
+    second: boss neco_73
+  - first:
+      213: -2355811793587533476
+    second: boss neco_74
+  - first:
+      213: 2850510522740357266
+    second: boss neco_75
+  - first:
+      213: -3376814972509142547
+    second: boss neco_76
+  - first:
+      213: -7286636028776655865
+    second: boss neco_77
+  - first:
+      213: -8922493944247405924
+    second: boss neco_78
+  - first:
+      213: 3070090798529609720
+    second: boss neco_79
+  - first:
+      213: 6527837408637675409
+    second: boss neco_80
+  - first:
+      213: 6317050862214208702
+    second: boss neco_81
+  - first:
+      213: -7333741962731514280
+    second: boss neco_82
+  - first:
+      213: -8520274832561028334
+    second: boss neco_83
+  - first:
+      213: 3144890004350450947
+    second: boss neco_84
+  - first:
+      213: 7379666232658738277
+    second: boss neco_85
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss neco_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 538
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fc62d7ec7ca634b0800000000000000
+      internalID: -5460987845674898186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 539
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e31deff7454617ce0800000000000000
+      internalID: -1409234894302817986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_2
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 540
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 818f315698c1d5210800000000000000
+      internalID: 1323245241948698648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_3
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 541
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25f5a7c0522c76590800000000000000
+      internalID: -7680957175078166702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_4
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 541
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0760a1a0e9c9ffaa0800000000000000
+      internalID: -6125004765612341648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_5
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 540
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d8e91909346e2b0800000000000000
+      internalID: -5555678802117489321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_6
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 539
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b2d7de6c90b9bc40800000000000000
+      internalID: 5528644203495019185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_7
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 538
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd26f1e280470c30800000000000000
+      internalID: 4325496897993584048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_8
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 450
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b291d7927b3a2d70800000000000000
+      internalID: 9019086567122244273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_9
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 449
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba748a435c554bd0800000000000000
+      internalID: -2646607693208061259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_10
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 449
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dfa111a89dc19390800000000000000
+      internalID: -7813237823090085931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_11
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 447
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3ea3aefd6fd6cc50800000000000000
+      internalID: 6685276360394649147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_12
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 448
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6ee08d6885d00700800000000000000
+      internalID: 504637940194930283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_13
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 449
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc19a5761e60fc630800000000000000
+      internalID: 3949382963398611404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_14
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 450
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c0fbc6df6dd22010800000000000000
+      internalID: 1162735126229807302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_15
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 451
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abbad8101d29556f0800000000000000
+      internalID: -696489140986991686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_16
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 362
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee7faf93b2c35560800000000000000
+      internalID: 7301393497631719136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_17
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 362
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bada3d760c418220800000000000000
+      internalID: 2486352060039748277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_18
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 363
+        width: 29
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ac664801835bc40800000000000000
+      internalID: 5527385761259112977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_19
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 364
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6981d7b6ef443c070800000000000000
+      internalID: 8125414012222249110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_20
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 364
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6976259f5550d310800000000000000
+      internalID: 1427734950889027946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_21
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 365
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 047b17e82f978c7e0800000000000000
+      internalID: -1745010772927203520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_22
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 366
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46c6d9ce721851f0800000000000000
+      internalID: -1056073776856906166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_23
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 366
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7c5dfd1b48da8c0800000000000000
+      internalID: -3986384195653613578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_24
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 365
+        width: 41
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17d7aa14780e14aa0800000000000000
+      internalID: -6178410342248710799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_25
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 364
+        width: 46
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bbeccf837781be90800000000000000
+      internalID: -7011674214435591245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_26
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 364
+        width: 49
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b13c72944c4568000800000000000000
+      internalID: 37810848896893723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_27
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 363
+        width: 51
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88986bcf56fb2e810800000000000000
+      internalID: 1793206046399302024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_28
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 362
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8594c4def4d526c90800000000000000
+      internalID: -7178072258210150056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_29
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 273
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d5f10e0bc552d420800000000000000
+      internalID: 2653277461076374993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_30
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 274
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc7f5c4bc0b1666a0800000000000000
+      internalID: -6456443274402596917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_31
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 275
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a625a94207597a0800000000000000
+      internalID: -6371062795335472539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_32
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 275
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e12c919736db8f830800000000000000
+      internalID: 4105239295279350302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_33
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 276
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 527d979db0288e650800000000000000
+      internalID: 6262398269263566629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_34
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 277
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2f1daf215ad46170800000000000000
+      internalID: 8170895666184003371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_35
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 278
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ebb92fccb3471fd0800000000000000
+      internalID: -2371352200578745371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_36
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 278
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3aff23aa6bcd2f0800000000000000
+      internalID: -946680979538336833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_37
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 277
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93a7eb24fde84db70800000000000000
+      internalID: 8922913851276425785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_38
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 276
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 167af2802ba076ac0800000000000000
+      internalID: -3862106395689113759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_39
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 275
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d65bef0766aae7430800000000000000
+      internalID: 3782648093996922221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_40
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 275
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5071584a960ded410800000000000000
+      internalID: 1503868477738653445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_41
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 274
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e46a821f571bb560800000000000000
+      internalID: 7330478515576005861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_42
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 185
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffaf57f9fc3ff1e20800000000000000
+      internalID: 3323643123081804543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_43
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 186
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e144182c1d2d96100800000000000000
+      internalID: 101844264945796126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_44
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 187
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d559ef063a70b4b0800000000000000
+      internalID: -5426703178367674925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_45
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 187
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d9e1180a343e0a30800000000000000
+      internalID: 4183338527721908689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_46
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 189
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eecd2b1bf6bef5c0800000000000000
+      internalID: -4179702214544208155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_47
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 189
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23a37de4858720c70800000000000000
+      internalID: 8935836931331668530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_48
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 190
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b2794c14938f4e00800000000000000
+      internalID: 1031187511844106937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_49
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 189
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c68dfed23bf7ca0800000000000000
+      internalID: -6016893567264854905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_50
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 189
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a42ae511c79f118b0800000000000000
+      internalID: -5183087384864054710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_51
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 189
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a30d1b4b8d26ef080800000000000000
+      internalID: -9151768709886259142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_52
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 188
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc382d7149794c690800000000000000
+      internalID: -7582769210274446389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_53
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 187
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a58badefcede27590800000000000000
+      internalID: -7677812812569462694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_54
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 186
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d6e5890dd961e2f0800000000000000
+      internalID: -945358048702634285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_55
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 186
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 475b962a15e0ba290800000000000000
+      internalID: -7878187379374574220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_56
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 184
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be2efaa25f6b3ae60800000000000000
+      internalID: 7972416929475322603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_57
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 184
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f779c585a94f96620800000000000000
+      internalID: 2768012389740484479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_58
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 184
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a75bfbc09d838270800000000000000
+      internalID: 8251594595309934496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_59
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 97
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd9fcbb12c5ef120800000000000000
+      internalID: 2449496547290750391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_60
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 100
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d9e326f8945ae5d0800000000000000
+      internalID: -3032518383139296807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_61
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 100
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c46b0ab5b9d618c0800000000000000
+      internalID: -4028793442102713146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_62
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 99
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d158e4bfa55ab0f20800000000000000
+      internalID: 3389984954708296989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_63
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 97
+        width: 29
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 451f06b202df3b780800000000000000
+      internalID: -8668306543149518508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_64
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 13
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81bbbfe8df0e55560800000000000000
+      internalID: 7301989750481337112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_65
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 43
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 695f1d4eb47103b50800000000000000
+      internalID: 6570777471062504854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_66
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 15
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536871ee2e78fbb40800000000000000
+      internalID: 5458230682123208245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_67
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 48
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7399c327df7bb5330800000000000000
+      internalID: 3700753817986177335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_68
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 12
+        width: 13
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 546bc877434491160800000000000000
+      internalID: 6996698488231474757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_69
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 46
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e282df12ef8712cf0800000000000000
+      internalID: -278808669032994770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_70
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 11
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789adc40aa4ddb5d0800000000000000
+      internalID: -3045043946342471289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_71
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 9
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc50c0156f3b246a0800000000000000
+      internalID: -6466408244447541809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_72
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 11
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a5fac1971c2edd20800000000000000
+      internalID: 3305127656278390179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_73
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 11
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e9e6a7fea9647000800000000000000
+      internalID: 32767297498573287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_74
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 11
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c590a85c7a97e4fd0800000000000000
+      internalID: -2355811793587533476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_75
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 13
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298b370c73c0f8720800000000000000
+      internalID: 2850510522740357266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_76
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 13
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de14f537ca42321d0800000000000000
+      internalID: -3376814972509142547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_77
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 40
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7045439532ba0ea90800000000000000
+      internalID: -7286636028776655865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_78
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 37
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c923f86f70fec2480800000000000000
+      internalID: -8922493944247405924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_79
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 13
+        width: 11
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ff7d82b0572b9a20800000000000000
+      internalID: 3070090798529609720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_80
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 41
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 197ea558989879a50800000000000000
+      internalID: 6527837408637675409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_81
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 11
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc5a5e3a4caaa750800000000000000
+      internalID: 6317050862214208702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_82
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 13
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856130d6a80593a90800000000000000
+      internalID: -7333741962731514280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_83
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 12
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 213cf70ae27e1c980800000000000000
+      internalID: -8520274832561028334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_84
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 11
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d3cfeebc4e4ab20800000000000000
+      internalID: 3144890004350450947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss neco_85
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 15
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56cb196e657d96660800000000000000
+      internalID: 7379666232658738277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: faba6f77c0ca48841970b5627b58f79d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      boss neco_0: -5460987845674898186
+      boss neco_1: -1409234894302817986
+      boss neco_10: -7813237823090085931
+      boss neco_11: 6685276360394649147
+      boss neco_12: 504637940194930283
+      boss neco_13: 3949382963398611404
+      boss neco_14: 1162735126229807302
+      boss neco_15: -696489140986991686
+      boss neco_16: 7301393497631719136
+      boss neco_17: 2486352060039748277
+      boss neco_18: 5527385761259112977
+      boss neco_19: 8125414012222249110
+      boss neco_2: 1323245241948698648
+      boss neco_20: 1427734950889027946
+      boss neco_21: -1745010772927203520
+      boss neco_22: -1056073776856906166
+      boss neco_23: -3986384195653613578
+      boss neco_24: -6178410342248710799
+      boss neco_25: -7011674214435591245
+      boss neco_26: 37810848896893723
+      boss neco_27: 1793206046399302024
+      boss neco_28: -7178072258210150056
+      boss neco_29: 2653277461076374993
+      boss neco_3: -7680957175078166702
+      boss neco_30: -6456443274402596917
+      boss neco_31: -6371062795335472539
+      boss neco_32: 4105239295279350302
+      boss neco_33: 6262398269263566629
+      boss neco_34: 8170895666184003371
+      boss neco_35: -2371352200578745371
+      boss neco_36: -946680979538336833
+      boss neco_37: 8922913851276425785
+      boss neco_38: -3862106395689113759
+      boss neco_39: 3782648093996922221
+      boss neco_4: -6125004765612341648
+      boss neco_40: 1503868477738653445
+      boss neco_41: 7330478515576005861
+      boss neco_42: 3323643123081804543
+      boss neco_43: 101844264945796126
+      boss neco_44: -5426703178367674925
+      boss neco_45: 4183338527721908689
+      boss neco_46: -4179702214544208155
+      boss neco_47: 8935836931331668530
+      boss neco_48: 1031187511844106937
+      boss neco_49: -6016893567264854905
+      boss neco_5: -5555678802117489321
+      boss neco_50: -5183087384864054710
+      boss neco_51: -9151768709886259142
+      boss neco_52: -7582769210274446389
+      boss neco_53: -7677812812569462694
+      boss neco_54: -945358048702634285
+      boss neco_55: -7878187379374574220
+      boss neco_56: 7972416929475322603
+      boss neco_57: 2768012389740484479
+      boss neco_58: 8251594595309934496
+      boss neco_59: 2449496547290750391
+      boss neco_6: 5528644203495019185
+      boss neco_60: -3032518383139296807
+      boss neco_61: -4028793442102713146
+      boss neco_62: 3389984954708296989
+      boss neco_63: -8668306543149518508
+      boss neco_64: 7301989750481337112
+      boss neco_65: 6570777471062504854
+      boss neco_66: 5458230682123208245
+      boss neco_67: 3700753817986177335
+      boss neco_68: 6996698488231474757
+      boss neco_69: -278808669032994770
+      boss neco_7: 4325496897993584048
+      boss neco_70: -3045043946342471289
+      boss neco_71: -6466408244447541809
+      boss neco_72: 3305127656278390179
+      boss neco_73: 32767297498573287
+      boss neco_74: -2355811793587533476
+      boss neco_75: 2850510522740357266
+      boss neco_76: -3376814972509142547
+      boss neco_77: -7286636028776655865
+      boss neco_78: -8922493944247405924
+      boss neco_79: 3070090798529609720
+      boss neco_8: 9019086567122244273
+      boss neco_80: 6527837408637675409
+      boss neco_81: 6317050862214208702
+      boss neco_82: -7333741962731514280
+      boss neco_83: -8520274832561028334
+      boss neco_84: 3144890004350450947
+      boss neco_85: 7379666232658738277
+      boss neco_9: -2646607693208061259
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
