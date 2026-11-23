@@ -11,7 +11,7 @@ public class BossMovement : MonoBehaviour
     [Header("Move Line")]
     public Transform pathContainer;
     public float moveSpeed = 5f;
-    public bool smoothCurve = true; 
+    public bool smoothCurve = true;
 
     [Header("FaceTurn")]
     public Transform player;
@@ -22,9 +22,12 @@ public class BossMovement : MonoBehaviour
     private Vector3 initialScale;
     private bool canMove = true;
 
+    private AfterimageEffect afterimage; 
+
     void Start()
     {
         initialScale = transform.localScale;
+        afterimage = GetComponent<AfterimageEffect>(); 
         RefreshWaypoints();
     }
 
@@ -43,6 +46,12 @@ public class BossMovement : MonoBehaviour
     {
         FacePlayer();
 
+        if (afterimage != null)
+        {
+            bool isActuallyMoving = canMove && currentPattern != MovePattern.Idle;
+            afterimage.isSpawning = isActuallyMoving;
+        }
+
         if (!canMove) return;
 
         switch (currentPattern)
@@ -59,6 +68,18 @@ public class BossMovement : MonoBehaviour
                     transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
                 break;
         }
+    }
+
+    public Transform GetPointOne()
+    {
+        if (waypoints.Count > 0) return waypoints[0];
+        return null;
+    }
+
+    public void ResetPathToStart()
+    {
+        currentIndex = 0;
+        segmentProgress = 0f;
     }
 
     void MoveAlongCustomPath()
