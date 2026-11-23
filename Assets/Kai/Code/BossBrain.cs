@@ -5,8 +5,8 @@ using UnityEngine;
 public class BossBrain : MonoBehaviour
 {
     [Header("Debug / Test Mode")]
-    [Tooltip("0 = Random, 1 = Summon, 2 = Lava, 3 = Bomb, 4 = Ghost")]
-    public int debugForceSkill = 0; 
+    [Tooltip("0 = Random, 1 = Lava, 2 = Bomb, 3 = Ghost")]
+    public int debugForceSkill = 0;
 
     [Header("Cooldown Base Attack")]
     public float minNormalCooldown = 5f;
@@ -20,7 +20,6 @@ public class BossBrain : MonoBehaviour
     public float returnSpeed = 8f;
 
     [HideInInspector] public bool isLavaActive = false;
-    [HideInInspector] public bool isPortalActive = false;
 
     private BossHealth health;
     private BossMovement movement;
@@ -28,8 +27,9 @@ public class BossBrain : MonoBehaviour
 
     private Skill_Lava skillLava;
     private Skill_Bomb skillBomb;
+    private BossGhostSkill skillGhost;
 
-    private bool isUsingSkill = false; 
+    private bool isUsingSkill = false;
 
     void Awake()
     {
@@ -39,6 +39,7 @@ public class BossBrain : MonoBehaviour
 
         skillLava = GetComponent<Skill_Lava>();
         skillBomb = GetComponent<Skill_Bomb>();
+        skillGhost = GetComponent<BossGhostSkill>();
     }
 
     void Start()
@@ -104,31 +105,24 @@ public class BossBrain : MonoBehaviour
     {
         int skillIndex;
 
-        if (debugForceSkill >= 1 && debugForceSkill <= 4)
+        if (debugForceSkill >= 1 && debugForceSkill <= 3)
         {
             skillIndex = debugForceSkill;
         }
         else
         {
-            skillIndex = Random.Range(1, 5);
-            while (isLavaActive && skillIndex == 2)
+            skillIndex = Random.Range(1, 4);
+
+            while (isLavaActive && skillIndex == 1)
             {
-                skillIndex = Random.Range(1, 5);
+                skillIndex = Random.Range(2, 4);
             }
         }
 
         switch (skillIndex)
         {
             case 1:
-                Debug.Log("1Skill Summon");
-                anim.SetTrigger("Buff");
-                isPortalActive = true;
-                yield return new WaitForSeconds(2f);
-                isPortalActive = false;
-                break;
-
-            case 2:
-                Debug.Log("2Skill lavaFloor");
+                Debug.Log("1 Skill: Lava Floor");
                 anim.SetTrigger("Buff");
                 if (skillLava != null)
                 {
@@ -138,8 +132,8 @@ public class BossBrain : MonoBehaviour
                 }
                 break;
 
-            case 3:
-                Debug.Log("3SKill Bome");
+            case 2:
+                Debug.Log("2 Skill: Bomb");
                 anim.SetTrigger("Attack1");
                 if (skillBomb != null)
                 {
@@ -147,10 +141,12 @@ public class BossBrain : MonoBehaviour
                 }
                 break;
 
-            case 4:
-                Debug.Log("4Skill Ghost");
-                anim.SetTrigger("Skill");
-                yield return new WaitForSeconds(2f);
+            case 3:
+                Debug.Log("3 Skill: Ghost");
+                if (skillGhost != null)
+                {
+                    yield return StartCoroutine(skillGhost.ExecuteSkill());
+                }
                 break;
         }
     }
