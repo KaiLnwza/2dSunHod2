@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 // ใช้ "วัตถุไฟที่วางไว้ในฉาก" เป็นลูกไฟเลย ไม่ต้องใช้ Prefab

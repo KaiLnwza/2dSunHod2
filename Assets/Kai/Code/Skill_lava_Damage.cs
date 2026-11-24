@@ -31,5 +31,6 @@ public class Skill_lava_Damage : MonoBehaviour
     void DealDamage(Collider2D player)
     {
         Debug.Log("ผู้เล่นโดนลาวาลวก -" + damagePerTick);
+        player.GetComponent<PlayerHealth>()?.TakeDamage(1); 
     }
 }

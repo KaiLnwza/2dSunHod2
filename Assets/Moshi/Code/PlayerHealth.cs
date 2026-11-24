@@ -73,6 +73,13 @@ public class PlayerHealth : MonoBehaviour
         UpdateHeartsUI();
     }
 
+    // เพิ่มฟังก์ชันนี้ต่อท้าย TakeDamage(int damage = 1) ในไฟล์ PlayerHealth.cs
+    public void TakeDamage(float damage)
+    {
+        // แปลงดาเมจจากบอส (เช่น 15f) ให้ลดเลือด Player 1 ดวง
+        TakeDamage(1);
+    }
+
     private IEnumerator InvincibilityCoroutine()
     {
         isInvincible = true;

@@ -128,15 +128,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (animator != null) animator.SetTrigger("Attack");
 
-        // ตรวจจับศัตรู/บอสในระยะฟัน
         if (attackPoint != null)
         {
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
             foreach (Collider2D enemy in hitEnemies)
             {
-                Debug.Log("ฟันโดน: " + enemy.name);
-                // ตัวอย่างการเรียกฟังก์ชันลดเลือดบอส:
-                // enemy.GetComponent<BossHealth>()?.TakeDamage(attackDamage);
+                // เรียกใช้ BossHealth ของเพื่อนเพื่อลดเลือดบอส
+                BossHealth boss = enemy.GetComponent<BossHealth>();
+                if (boss != null)
+                {
+                    boss.TakeDamage(attackDamage);
+                }
             }
         }
     }

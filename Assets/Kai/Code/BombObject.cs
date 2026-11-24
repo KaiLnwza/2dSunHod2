@@ -53,6 +53,7 @@ public class BombObject : MonoBehaviour
         if (hitPlayer != null)
         {
             Debug.Log("ผู้เล่นโดนระเบิด! -" + damage);
+            hitPlayer.GetComponent<PlayerHealth>()?.TakeDamage(1);
         }
 
         Destroy(gameObject);
