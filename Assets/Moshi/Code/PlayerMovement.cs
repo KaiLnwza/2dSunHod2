@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Ground Check")]
     public Transform groundCheck;
-    public float checkRadius = 0.2f;
+    public float checkRadius = 0.4f;
     public LayerMask groundLayer;
 
     [Header("Animation")]
@@ -33,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
     private float moveInput;
     private bool isGrounded;
     private int jumpsLeft;
-    private GameObject currentOneWayPlatform;
 
     // สถานะ Dash, ย่อ, โจมตี
     private bool isDashing;
@@ -57,7 +56,11 @@ public class PlayerMovement : MonoBehaviour
         moveInput = Input.GetAxisRaw("Horizontal");
 
         // เช็กพื้น
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+        if (groundCheck != null)
+        {
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+        }
+
         if (isGrounded && rb.linearVelocity.y <= 0.1f)
         {
             jumpsLeft = maxJumps;
@@ -81,12 +84,24 @@ public class PlayerMovement : MonoBehaviour
             else if (moveInput < 0) transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        // 3. กดกระโดด หรือ กดลงทะลุ Platform (ถ้ากด S ค้างแล้วกด Spacebar จะร่วงทะลุพื้น)
+        // 3. กดกระโดด หรือ กดลงทะลุ Platform (กด S หรือ ลูกศรลง ค้างไว้ แล้วกด Spacebar หรือ W)
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {
-            if (isCrouching && currentOneWayPlatform != null)
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
-                StartCoroutine(DisableCollision());
+                if (groundCheck != null)
+                {
+                    Collider2D[] platforms = Physics2D.OverlapCircleAll(
+                        groundCheck.position,
+                        checkRadius + 0.25f,
+                        LayerMask.GetMask("OneWayPlatform")
+                    );
+
+                    if (platforms.Length > 0)
+                    {
+                        StartCoroutine(DisableCollision(platforms));
+                    }
+                }
             }
             else if (!isCrouching && jumpsLeft > 0)
             {
@@ -133,12 +148,17 @@ public class PlayerMovement : MonoBehaviour
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
             foreach (Collider2D enemy in hitEnemies)
             {
+<<<<<<< Updated upstream
                 // เรียกใช้ BossHealth ของเพื่อนเพื่อลดเลือดบอส
                 BossHealth boss = enemy.GetComponent<BossHealth>();
                 if (boss != null)
                 {
                     boss.TakeDamage(attackDamage);
                 }
+=======
+                Debug.Log("ฟันโดน: " + enemy.name);
+                // enemy.GetComponent<BossHealth>()?.TakeDamage(attackDamage);
+>>>>>>> Stashed changes
             }
         }
     }
@@ -149,7 +169,7 @@ public class PlayerMovement : MonoBehaviour
         isDashing = true;
 
         float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0f; // ปิดแรงโน้มถ่วงตอนพุ่งตัว
+        rb.gravityScale = 0f;
         rb.linearVelocity = new Vector2(transform.localScale.x * dashSpeed, 0f);
 
         if (animator != null) animator.SetTrigger("Dash");
@@ -163,27 +183,33 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private IEnumerator DisableCollision(Collider2D[] platforms)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("OneWayPlatform"))
-            currentOneWayPlatform = collision.gameObject;
+        foreach (Collider2D platformCol in platforms)
+        {
+            foreach (Collider2D playerCol in playerColliders)
+            {
+                Physics2D.IgnoreCollision(playerCol, platformCol, true);
+            }
+        }
+
+        // ดันตัวละครลงเล็กน้อยเพื่อให้หลุดพ้นระยะผิวของ Platform Effector 2D ทันที
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, -2.5f);
+
+        yield return new WaitForSeconds(0.35f);
+
+        foreach (Collider2D platformCol in platforms)
+        {
+            if (platformCol != null)
+            {
+                foreach (Collider2D playerCol in playerColliders)
+                {
+                    Physics2D.IgnoreCollision(playerCol, platformCol, false);
+                }
+            }
+        }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("OneWayPlatform"))
-            currentOneWayPlatform = null;
-    }
-
-    private IEnumerator DisableCollision()
-    {
-        Collider2D platformCollider = currentOneWayPlatform.GetComponent<Collider2D>();
-        foreach (Collider2D col in playerColliders) Physics2D.IgnoreCollision(col, platformCollider, true);
-        yield return new WaitForSeconds(0.25f);
-        foreach (Collider2D col in playerColliders) Physics2D.IgnoreCollision(col, platformCollider, false);
-    }
-
-    // วาดวงกลมระยะฟันดาบในหน้าจอ Scene
     private void OnDrawGizmosSelected()
     {
         if (attackPoint != null)
@@ -191,7 +217,14 @@ public class PlayerMovement : MonoBehaviour
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(attackPoint.position, attackRange);
         }
+
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
+        }
     }
+
     public bool IsDashing()
     {
         return isDashing;
