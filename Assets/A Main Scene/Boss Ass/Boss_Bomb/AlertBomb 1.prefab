@@ -80,10 +80,10 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.8018868, g: 0.11725702, b: 0.11725702, a: 0.83137256}
+  m_Color: {r: 0.8018868, g: 0.11725702, b: 0.11725702, a: 0.2901961}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -109,5 +109,5 @@ MonoBehaviour:
   damage: 15
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
-  explosionVFX: {fileID: 5540910329056203899, guid: fc57e992784468048ae2c0e9500ddd0e, type: 3}
+    m_Bits: 512
+  explosionVFX: {fileID: 6768070958390850841, guid: 13b1d9902d4094e4c960785871f18ebb, type: 3}

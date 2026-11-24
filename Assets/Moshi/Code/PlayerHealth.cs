@@ -9,13 +9,17 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
     public float invincibilityDuration = 1f;
 
+    [Header("Auto Heal on Hit (ตีครบ 4 ครั้ง รีเลือด 1 ดวง)")]
+    public int hitsRequiredToHeal = 4;
+    public int currentHitCount = 0;
+
     [Header("Heart UI")]
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
     [Header("Animation")]
-    public Animator animator; // ช่องใส่ Animator ของ SpriteBody
+    public Animator animator;
 
     private bool isInvincible = false;
     private bool isDead = false;
@@ -32,22 +36,41 @@ public class PlayerHealth : MonoBehaviour
 
     public void UpdateHeartsUI()
     {
+        if (hearts == null || hearts.Length == 0) return;
+
         for (int i = 0; i < hearts.Length; i++)
         {
-            hearts[i].sprite = (i < currentHealth) ? fullHeart : emptyHeart;
+            if (hearts[i] != null)
+            {
+                hearts[i].sprite = (i < currentHealth) ? fullHeart : emptyHeart;
+            }
         }
     }
 
-    public void TakeDamage(int damage = 1)
+    // ฟังก์ชันนี้จะถูกเรียกจาก PlayerMovement ทุกครั้งที่ฟันโดนบอส
+    public void RegisterBossHit()
     {
-        if (isDead || isInvincible || (playerMovement != null && playerMovement.IsDashing()))
+        if (isDead) return;
+
+        currentHitCount++;
+        Debug.Log($"ตีบอสโดนสะสม: {currentHitCount}/{hitsRequiredToHeal} ครั้ง");
+
+        if (currentHitCount >= hitsRequiredToHeal)
         {
-            return;
+            currentHitCount = 0; // <-- บรรทัดนี้บังคับรีเซ็ตกลับเป็น 0 เพื่อเริ่มนับรอบใหม่
+            Heal(1);             // <-- บวกเลือด +1 HP
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        bool isDashing = (playerMovement != null && playerMovement.IsDashing());
+        if (isDead || isInvincible || isDashing) return;
 
         currentHealth -= damage;
         if (currentHealth < 0) currentHealth = 0;
 
+        Debug.Log($"<color=red>Player โดนตี!</color> เลือดเหลือ {currentHealth}/{maxHealth}");
         UpdateHeartsUI();
 
         if (currentHealth <= 0)
@@ -60,6 +83,11 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void TakeDamage(float damage)
+    {
+        TakeDamage(1);
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.H)) TakeDamage(1);
@@ -68,16 +96,12 @@ public class PlayerHealth : MonoBehaviour
     public void Heal(int amount = 1)
     {
         if (isDead) return;
+
         currentHealth += amount;
         if (currentHealth > maxHealth) currentHealth = maxHealth;
-        UpdateHeartsUI();
-    }
 
-    // เพิ่มฟังก์ชันนี้ต่อท้าย TakeDamage(int damage = 1) ในไฟล์ PlayerHealth.cs
-    public void TakeDamage(float damage)
-    {
-        // แปลงดาเมจจากบอส (เช่น 15f) ให้ลดเลือด Player 1 ดวง
-        TakeDamage(1);
+        Debug.Log($"<color=green>รีเลือด +1 HP!</color> เลือดปัจจุบัน: {currentHealth}/{maxHealth}");
+        UpdateHeartsUI();
     }
 
     private IEnumerator InvincibilityCoroutine()
@@ -90,21 +114,10 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         isDead = true;
+        Debug.Log("<color=red>Player ตายแล้ว!</color>");
 
-        // 1. สั่งเล่นอนิเมชั่นตาย
-        if (animator != null)
-        {
-            animator.SetTrigger("Die");
-        }
-
-        // 2. หยุดการเคลื่อนที่และปิดสคริปต์ควบคุมตัวละคร
-        if (rb != null)
-        {
-            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
-        }
-        if (playerMovement != null)
-        {
-            playerMovement.enabled = false;
-        }
+        if (animator != null) animator.SetTrigger("Die");
+        if (rb != null) rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+        if (playerMovement != null) playerMovement.enabled = false;
     }
 }

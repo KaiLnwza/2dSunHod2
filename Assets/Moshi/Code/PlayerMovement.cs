@@ -148,17 +148,13 @@ public class PlayerMovement : MonoBehaviour
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
             foreach (Collider2D enemy in hitEnemies)
             {
-<<<<<<< Updated upstream
-                // เรียกใช้ BossHealth ของเพื่อนเพื่อลดเลือดบอส
                 BossHealth boss = enemy.GetComponent<BossHealth>();
-                if (boss != null)
+                // เช็กว่าบอสยังไม่ตายและไม่ได้อยู่ในสถานะอมตะ ถึงจะนับจำนวนการตีให้
+                if (boss != null && !boss.isDead && !boss.isInvincible)
                 {
                     boss.TakeDamage(attackDamage);
+                    GetComponent<PlayerHealth>()?.RegisterBossHit();
                 }
-=======
-                Debug.Log("ฟันโดน: " + enemy.name);
-                // enemy.GetComponent<BossHealth>()?.TakeDamage(attackDamage);
->>>>>>> Stashed changes
             }
         }
     }

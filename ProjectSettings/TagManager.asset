@@ -13,13 +13,8 @@ TagManager:
   - UI
   - Ground
   - OneWayPlatform
-<<<<<<< Updated upstream
-  - Enemy
-  - Player
-=======
   - Boss
-  - 
->>>>>>> Stashed changes
+  - Player
   - 
   - 
   - 
