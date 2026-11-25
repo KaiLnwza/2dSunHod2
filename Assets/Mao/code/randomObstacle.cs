@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 // ใช้ "วัตถุไฟที่วางไว้ในฉาก" เป็นลูกไฟเลย ไม่ต้องใช้ Prefab
@@ -9,11 +8,11 @@ public class randomObstacle : MonoBehaviour
 {
     [Header("Settings time")]
     public float gameDuration = 210f;   // 3 นาที 30 วิ
-    public float spawnInterval = 1f;   
+    public float spawnInterval = 30f;   // ยิงทุก 30 วิ
     public float spawnTimer = 5f;       // ไฟอยู่ 5 วิ แล้วหาย
 
     [Header("Settings Fire")]
-    public float fireSpeed = 25f;
+    public float fireSpeed = 8f;
     public int fireDamage = 10;
     [Tooltip("ทิศของรูปตอนหมุน z = 0 (ใช้กับทุก Header)")]
     public Vector2 baseDirection = Vector2.up;
@@ -31,6 +30,10 @@ public class randomObstacle : MonoBehaviour
     public bool reverseRed1 = true;
     public GameObject[] firered2;
     public bool reverseRed2 = true;
+    public GameObject[] firered3;       // เผื่อ Header แดงที่เพิ่มใหม่ (ว่างได้)
+    public bool reverseRed3 = true;
+    public GameObject[] firered4;
+    public bool reverseRed4 = true;
 
     [Header("Blue")]
     public GameObject[] fireblue1;
@@ -42,9 +45,11 @@ public class randomObstacle : MonoBehaviour
     public GameObject[] fireblue4;
     public bool reverseBlue4 = false;
 
-    [Header("Green (ยังไม่ใช้)")]
+    [Header("Green")]
     public GameObject[] firegreen1;
+    public bool reverseGreen1 = false;
     public GameObject[] firegreen2;
+    public bool reverseGreen2 = false;
 
     // Header 1 ชุด = ลูกไฟหลายดวง + id (ใช้หาค่า reverse ของชุดนั้น)
     private class FireHeader
@@ -77,6 +82,10 @@ public class randomObstacle : MonoBehaviour
             case 4: return reverseBlue2;
             case 5: return reverseBlue3;
             case 6: return reverseBlue4;
+            case 7: return reverseRed3;
+            case 8: return reverseRed4;
+            case 9: return reverseGreen1;
+            case 10: return reverseGreen2;
         }
         return false;
     }
@@ -86,7 +95,13 @@ public class randomObstacle : MonoBehaviour
         colorGroups = new List<FireHeader[]>
         {
             new FireHeader[] { new FireHeader(firepurple1, 0) },
-            new FireHeader[] { new FireHeader(firered1, 1), new FireHeader(firered2, 2) },
+            new FireHeader[]
+            {
+                new FireHeader(firered1, 1),
+                new FireHeader(firered2, 2),
+                new FireHeader(firered3, 7),
+                new FireHeader(firered4, 8)
+            },
             new FireHeader[]
             {
                 new FireHeader(fireblue1, 3),
@@ -94,12 +109,24 @@ public class randomObstacle : MonoBehaviour
                 new FireHeader(fireblue3, 5),
                 new FireHeader(fireblue4, 6)
             },
+            new FireHeader[]
+            {
+                new FireHeader(firegreen1, 9),
+                new FireHeader(firegreen2, 10)
+            },
         };
 
         // เตรียมลูกไฟทุกลูก แล้วซ่อนไว้ก่อน
+        string[] headerNames = { "Firepurple1", "Firered1", "Firered2", "Fireblue1", "Fireblue2", "Fireblue3", "Fireblue4", "Firered3", "Firered4", "Firegreen1", "Firegreen2" };
         foreach (FireHeader[] group in colorGroups)
+        {
             foreach (FireHeader h in group)
+            {
+                int n = (h.fires == null) ? 0 : h.fires.Length;
+                Debug.Log("[randomObstacle] " + headerNames[h.id] + " มีลูกไฟ " + n + " ตัว" + (n == 0 ? "  <-- ว่าง! ต้องลากวัตถุไฟใส่ช่องนี้" : ""));
                 PrepareHeader(h.fires);
+            }
+        }
     }
 
     void PrepareHeader(GameObject[] fires)
@@ -110,21 +137,37 @@ public class randomObstacle : MonoBehaviour
         {
             if (fire == null) continue;
 
-            // ต้องมี Collider2D (Trigger) + Rigidbody2D (Kinematic) เพื่อให้ชนผู้เล่นได้
-            Collider2D col = fire.GetComponent<Collider2D>();
-            if (col == null) col = fire.AddComponent<CircleCollider2D>();
-            col.isTrigger = true;
+            // ถ้าลูกไฟตัวไหนมีปัญหา ให้ข้ามตัวนั้นแล้วบอกชื่อใน Console (ไม่ให้ตัวอื่นพังตามไปด้วย)
+            try
+            {
+                PrepareOne(fire);
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogError("[randomObstacle] เตรียมลูกไฟ '" + fire.name + "' ไม่สำเร็จ: " + e.Message, fire);
+            }
+        }
+    }
 
-            Rigidbody2D rb = fire.GetComponent<Rigidbody2D>();
-            if (rb == null) rb = fire.AddComponent<Rigidbody2D>();
+    void PrepareOne(GameObject fire)
+    {
+        // ต้องมี Collider2D (Trigger) + Rigidbody2D (Kinematic) เพื่อให้ชนผู้เล่นได้
+        Collider2D col = fire.GetComponent<Collider2D>();
+        if (col == null) col = fire.AddComponent<CircleCollider2D>();
+        if (col != null) col.isTrigger = true;
+
+        Rigidbody2D rb = fire.GetComponent<Rigidbody2D>();
+        if (rb == null) rb = fire.AddComponent<Rigidbody2D>();
+        if (rb != null)
+        {
             rb.bodyType = RigidbodyType2D.Kinematic;
             rb.gravityScale = 0f;
-
-            FireProjectile proj = fire.GetComponent<FireProjectile>();
-            if (proj == null) proj = fire.AddComponent<FireProjectile>();
-
-            proj.Capture();   // จำตำแหน่ง/มุมเริ่มต้น แล้วซ่อน
         }
+
+        FireProjectile proj = fire.GetComponent<FireProjectile>();
+        if (proj == null) proj = fire.AddComponent<FireProjectile>();
+
+        proj.Capture();   // จำตำแหน่ง/มุมเริ่มต้น แล้วซ่อน
     }
 
     private void Start()
@@ -150,6 +193,9 @@ public class randomObstacle : MonoBehaviour
 
     [ContextMenu("Test Spawn All Purple")]
     void TestSpawnAllPurple() { TestAll(0); }
+
+    [ContextMenu("Test Spawn All Green")]
+    void TestSpawnAllGreen() { TestAll(3); }
 
     void TestAll(int colorIndex)
     {
@@ -186,14 +232,27 @@ public class randomObstacle : MonoBehaviour
         Debug.Log("Game Ended!");
     }
 
+    bool HasFires(FireHeader[] group)
+    {
+        foreach (FireHeader h in group)
+        {
+            if (h != null && h.fires != null && h.fires.Length > 0)
+                return true;
+        }
+        return false;
+    }
+
     int PickRandomColor()
     {
         int index;
+        int tries = 0;
         do
         {
             index = Random.Range(0, colorGroups.Count);
+            tries++;
         }
-        while (colorGroups.Count > 1 && index == lastColor);
+        // ไม่สุ่มสีเดิมซ้ำ และข้ามสีที่ไม่มีลูกไฟเลย (กันรอบที่ไม่ยิงอะไร)
+        while (tries < 50 && colorGroups.Count > 1 && (index == lastColor || !HasFires(colorGroups[index])));
 
         lastColor = index;
         return index;
