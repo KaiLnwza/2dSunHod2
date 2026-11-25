@@ -4,27 +4,27 @@ using System.Collections;
 public class BossLaserAttack : MonoBehaviour
 {
     [Header("Attack Point")]
-    public Transform laserOrigin;      
-    public Transform player;           
-    public LineRenderer lineRenderer;  
+    public Transform laserOrigin;
+    public Transform player;
+    public LineRenderer lineRenderer;
     private BossHealth bossHealth;
 
     [Header("Charge")]
-    public float minFireInterval = 4f; 
-    public float maxFireInterval = 6f; 
-    public float aimDuration = 1.5f;   
+    public float minFireInterval = 4f;
+    public float maxFireInterval = 6f;
+    public float aimDuration = 1.5f;
     public float lockDuration = 0.35f;
-    public float fireDuration = 0.4f; 
+    public float fireDuration = 0.4f;
 
     [Header("Damage")]
-    public float laserLength = 25f;    
-    public float aimWidth = 0.05f;     
-    public float fireWidth = 0.6f;     
-    public Color aimColor = new Color(1f, 0f, 0f, 0.45f); 
+    public float laserLength = 25f;
+    public float aimWidth = 0.05f;
+    public float fireWidth = 0.6f;
+    public Color aimColor = new Color(1f, 0f, 0f, 0.45f);
     public Color lockColor = new Color(1f, 0.8f, 0f, 0.9f);
-    public Color fireColor = new Color(1f, 0.1f, 0.1f, 1f); 
+    public Color fireColor = new Color(1f, 0.1f, 0.1f, 1f);
     public float damage = 15f;
-    public LayerMask targetLayer;     
+    public LayerMask targetLayer;
 
     private float cooldownTimer;
     private bool isFiring = false;
@@ -90,7 +90,10 @@ public class BossLaserAttack : MonoBehaviour
         lineRenderer.startColor = fireColor;
         lineRenderer.endColor = fireColor;
 
-        bool hasHitPlayer = false; 
+        // --- [เพิ่มเสียงยิงเลเซอร์] ดังตรงจังหวะลำแสงใหญ่ยิงออกพอดี ---
+        if (SoundManager.Instance != null) SoundManager.Instance.PlaySFX(SoundManager.Instance.bossLaserSound);
+
+        bool hasHitPlayer = false;
         timer = 0f;
         while (timer < fireDuration)
         {

@@ -4,12 +4,12 @@ using UnityEngine;
 public class Skill_Lava : MonoBehaviour
 {
     [Header("ลาก Object จาก Hierarchy มาใส่")]
-    public GameObject lavaWarningObj; 
-    public GameObject lavaFloorObj;   
+    public GameObject lavaWarningObj;
+    public GameObject lavaFloorObj;
 
     [Header("ตั้งค่าเวลา (วินาที)")]
-    public float warningDuration = 1.5f; 
-    public float lavaDuration = 15f;     
+    public float warningDuration = 1.5f;
+    public float lavaDuration = 15f;
 
     void Start()
     {
@@ -24,6 +24,9 @@ public class Skill_Lava : MonoBehaviour
 
         if (lavaWarningObj != null) lavaWarningObj.SetActive(false);
         if (lavaFloorObj != null) lavaFloorObj.SetActive(true);
+
+        // --- [เพิ่มเสียงลาวา] ดังตรงจังหวะพื้นลาวาโผล่ขึ้นมาจริง ---
+        if (SoundManager.Instance != null) SoundManager.Instance.PlaySFX(SoundManager.Instance.bossLavaSound);
 
         yield return new WaitForSeconds(lavaDuration);
 

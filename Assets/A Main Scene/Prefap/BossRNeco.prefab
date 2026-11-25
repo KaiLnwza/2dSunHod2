@@ -159,7 +159,6 @@ GameObject:
   - component: {fileID: 2322313728013897299}
   - component: {fileID: 5366489814062940674}
   - component: {fileID: 7320476887919246982}
-  - component: {fileID: 3192331019252391676}
   - component: {fileID: 3334395403896040372}
   - component: {fileID: 5971981415496126954}
   m_Layer: 0
@@ -299,6 +298,11 @@ MonoBehaviour:
   maxHP: 1000
   currentHP: 0
   isInvincible: 0
+  destroyDelay: 2.5
+  objectsToDisableOnDeath: []
+  hitFlashColor: {r: 1, g: 0.35, b: 0.35, a: 1}
+  invincibleColor: {r: 0.5, g: 0.8, b: 1, a: 0.8}
+  hitFlashDuration: 0.1
 --- !u!114 &1403664951293889114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,20 +385,6 @@ MonoBehaviour:
   lavaFloorObj: {fileID: 0}
   warningDuration: 1.5
   lavaDuration: 15
---- !u!114 &3192331019252391676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6610066701474797968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5e948f996ae26f40b5e13c3ec11b3ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Skill_lava_Damage
-  damagePerTick: 10
-  damageInterval: 0.5
 --- !u!114 &3334395403896040372
 MonoBehaviour:
   m_ObjectHideFlags: 0

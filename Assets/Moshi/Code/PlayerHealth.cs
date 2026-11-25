@@ -70,6 +70,9 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth < 0) currentHealth = 0;
 
+        // --- [เพิ่มเสียงโดนตี] ---
+        if (SoundManager.Instance != null) SoundManager.Instance.PlaySFX(SoundManager.Instance.getHitSound);
+
         Debug.Log($"<color=red>Player โดนตี!</color> เลือดเหลือ {currentHealth}/{maxHealth}");
         UpdateHeartsUI();
 
@@ -115,6 +118,9 @@ public class PlayerHealth : MonoBehaviour
     {
         isDead = true;
         Debug.Log("<color=red>Player ตายแล้ว!</color>");
+
+        // --- [เพิ่มเสียงแพ้ + หยุดเพลง BGM] ---
+        if (SoundManager.Instance != null) SoundManager.Instance.PlayEndGame(SoundManager.Instance.loseSound);
 
         if (animator != null) animator.SetTrigger("Die");
         if (rb != null) rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);

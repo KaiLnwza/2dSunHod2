@@ -50,7 +50,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // ถ้ากำลัง Dash อยู่ ให้ล็อกการควบคุมอื่นชั่วคราว
-        if (isDashing) return;
+        if (isDashing)
+        {
+            if (SoundManager.Instance != null) SoundManager.Instance.SetWalking(false); // หยุดเสียงเดินตอน Dash
+            return;
+        }
 
         // 1. รับค่าเดินซ้าย-ขวา
         moveInput = Input.GetAxisRaw("Horizontal");
@@ -131,6 +135,13 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("VerticalVelocity", rb.linearVelocity.y);
             animator.SetBool("IsCrouching", isCrouching);
         }
+
+        // --- [เพิ่มเสียงเดิน] เล่นเมื่อเดินบนพื้นและไม่ได้ย่อตัว ---
+        if (SoundManager.Instance != null)
+        {
+            bool isWalking = Mathf.Abs(moveInput) > 0.1f && isGrounded && !isCrouching;
+            SoundManager.Instance.SetWalking(isWalking);
+        }
     }
 
     void FixedUpdate()
@@ -143,6 +154,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (animator != null) animator.SetTrigger("Attack");
 
+        // --- [เพิ่มเสียงฟัน] ---
+        if (SoundManager.Instance != null) SoundManager.Instance.PlaySFX(SoundManager.Instance.attackSound);
+
         if (attackPoint != null)
         {
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -154,6 +168,9 @@ public class PlayerMovement : MonoBehaviour
                 {
                     boss.TakeDamage(attackDamage);
                     GetComponent<PlayerHealth>()?.RegisterBossHit();
+
+                    // --- [เพิ่มเสียงฟันโดนบอส] ---
+                    if (SoundManager.Instance != null) SoundManager.Instance.PlaySFX(SoundManager.Instance.attackHitSound);
                 }
             }
         }

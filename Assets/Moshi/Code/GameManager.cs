@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        Time.timeScale = 1f; // บังคับให้เวลาเดินปกติทุกครั้งที่เริ่มฉาก
+        Time.timeScale = 1f;
     }
 
     void Start()
@@ -31,7 +31,6 @@ public class GameManager : MonoBehaviour
         if (winPanel != null) winPanel.SetActive(false);
         if (losePanel != null) losePanel.SetActive(false);
 
-        // เชื่อมเหตุการณ์ตอนบอสตายจาก BossHealth ของเพื่อนโดยตรง
         if (bossHealth != null)
         {
             bossHealth.OnBossDeath += HandleBossWin;
@@ -51,7 +50,11 @@ public class GameManager : MonoBehaviour
     {
         if (isGameEnded) return;
         isGameEnded = true;
-        StartCoroutine(ShowEndScreenRoutine(losePanel, loseDelay));
+
+        // หยุดเพลง BG ทันทีที่ Player ตาย
+        if (SoundManager.Instance != null) SoundManager.Instance.StopBGM();
+
+        StartCoroutine(ShowEndScreenRoutine(losePanel, loseDelay, false));
     }
 
     // เรียกใช้เมื่อ Boss ตาย
@@ -59,12 +62,19 @@ public class GameManager : MonoBehaviour
     {
         if (isGameEnded) return;
         isGameEnded = true;
-        StartCoroutine(ShowEndScreenRoutine(winPanel, winDelay));
+
+        // หยุดเพลง BG ทันที + เล่นเสียงบอสตาย
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.StopBGM();
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.bossDieSound);
+        }
+
+        StartCoroutine(ShowEndScreenRoutine(winPanel, winDelay, true));
     }
 
-    private IEnumerator ShowEndScreenRoutine(GameObject panelToShow, float delay)
+    private IEnumerator ShowEndScreenRoutine(GameObject panelToShow, float delay, bool isWin)
     {
-        // รอให้ท่าตายเล่นจบก่อน (ใช้ Realtime เผื่อมีการปรับเวลา)
         yield return new WaitForSecondsRealtime(delay);
 
         if (panelToShow != null)
@@ -72,11 +82,15 @@ public class GameManager : MonoBehaviour
             panelToShow.SetActive(true);
         }
 
-        // หยุดเวลาทั้งหมดในเกม (ตัวละคร บอส ลูกไฟ และสกิลหยุดนิ่งทันที)
+        // เล่นเสียงชนะตอนป้าย Win เด้งขึ้นมา
+        if (isWin && SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.winSound);
+        }
+
         Time.timeScale = 0f;
     }
 
-    // ฟังก์ชันเสริม เผื่อเอาไปผูกกับปุ่ม Restart ในอนาคต
     public void RestartGame()
     {
         Time.timeScale = 1f;

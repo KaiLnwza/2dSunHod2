@@ -4,9 +4,9 @@ using UnityEngine;
 public class BombObject : MonoBehaviour
 {
     [Header("ตั้งค่าเวลาและดาเมจ")]
-    public float warningDuration = 1.2f; 
+    public float warningDuration = 1.2f;
     public int damage = 15;
-    public LayerMask playerLayer;        
+    public LayerMask playerLayer;
 
     [Header("เอฟเฟกต์ตอนระเบิด")]
     public GameObject explosionVFX;
@@ -43,6 +43,9 @@ public class BombObject : MonoBehaviour
 
     void Explode()
     {
+        // --- [เพิ่มเสียงระเบิด] ดังเฉพาะตอนระเบิดจริง ไม่ดังตอนกระพริบเตือน ---
+        if (SoundManager.Instance != null) SoundManager.Instance.PlaySFX(SoundManager.Instance.bossBombSound);
+
         if (explosionVFX != null)
         {
             GameObject vfx = Instantiate(explosionVFX, transform.position, Quaternion.identity);
