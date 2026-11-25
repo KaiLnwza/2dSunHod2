@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 260543}
   - component: {fileID: 260544}
   m_Layer: 0
-  m_Name: randommon
+  m_Name: randomball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
   spawnInterval: 5
   spawnTimer: 5
   fireSpeed: 11
-  fireDamage: 10
+  fireDamage: 1
   baseDirection: {x: 0, y: 1}
   minRandomFire: 1
   maxRandomFire: 2

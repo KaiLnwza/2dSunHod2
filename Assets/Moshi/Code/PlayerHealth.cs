@@ -119,5 +119,8 @@ public class PlayerHealth : MonoBehaviour
         if (animator != null) animator.SetTrigger("Die");
         if (rb != null) rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
         if (playerMovement != null) playerMovement.enabled = false;
+
+        // แจ้ง GameManager ให้รอท่าตายจบแล้วขึ้นฉากแพ้ + หยุดเกม
+        GameManager.instance?.TriggerLose();
     }
 }

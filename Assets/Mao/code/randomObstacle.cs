@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// ใช้ "วัตถุไฟที่วางไว้ในฉาก" เป็นลูกไฟเลย ไม่ต้องใช้ Prefab
-// ตอนเริ่มเกม ทุกลูกจะถูกซ่อน ถึงคิวสีไหนก็โผล่ที่ตำแหน่งเดิมแล้วพุ่งตามมุม z ของตัวเอง
 public class randomObstacle : MonoBehaviour
 {
+    [Header("Target (เป้าหมาย)")]
+    public Transform playerTarget; // ลาก Player มาใส่ หรือปล่อยว่างให้หาจาก Tag "Player" อัตโนมัติ
+
     [Header("Settings time")]
     public float gameDuration = 210f;   // 3 นาที 30 วิ
     public float spawnInterval = 30f;   // ยิงทุก 30 วิ
@@ -13,8 +14,8 @@ public class randomObstacle : MonoBehaviour
 
     [Header("Settings Fire")]
     public float fireSpeed = 8f;
-    public int fireDamage = 10;
-    [Tooltip("ทิศของรูปตอนหมุน z = 0 (ใช้กับทุก Header)")]
+    public int fireDamage = 1;          // ปรับเป็น 1 เพื่อลดหัวใจทีละ 1 ดวง (หรือใช้ค่าเดิมได้)
+    [Tooltip("ทิศของหัวลูกไฟในรูป Sprite ตอน rotation = 0 (เช่น Vector2.up หรือ Vector2.right)")]
     public Vector2 baseDirection = Vector2.up;
 
     [Header("Random Settings (จำนวน Header ที่สุ่มในสีเดียวกัน)")]
@@ -23,17 +24,17 @@ public class randomObstacle : MonoBehaviour
 
     [Header("Purple")]
     public GameObject[] firepurple1;
-    public bool reversePurple1 = true;   // ติ๊ก = กลับทิศพุ่งของ Header นี้
+    public bool reversePurple1 = false;
 
     [Header("Red")]
     public GameObject[] firered1;
-    public bool reverseRed1 = true;
+    public bool reverseRed1 = false;
     public GameObject[] firered2;
-    public bool reverseRed2 = true;
-    public GameObject[] firered3;       // เผื่อ Header แดงที่เพิ่มใหม่ (ว่างได้)
-    public bool reverseRed3 = true;
+    public bool reverseRed2 = false;
+    public GameObject[] firered3;
+    public bool reverseRed3 = false;
     public GameObject[] firered4;
-    public bool reverseRed4 = true;
+    public bool reverseRed4 = false;
 
     [Header("Blue")]
     public GameObject[] fireblue1;
@@ -51,7 +52,6 @@ public class randomObstacle : MonoBehaviour
     public GameObject[] firegreen2;
     public bool reverseGreen2 = false;
 
-    // Header 1 ชุด = ลูกไฟหลายดวง + id (ใช้หาค่า reverse ของชุดนั้น)
     private class FireHeader
     {
         public GameObject[] fires;
@@ -67,8 +67,6 @@ public class randomObstacle : MonoBehaviour
     private int lastColor = -1;
 
     private readonly List<FireProjectile> activeFires = new List<FireProjectile>();
-
-    // ชุดสี: 0 = ม่วง, 1 = แดง, 2 = ฟ้า
     private List<FireHeader[]> colorGroups;
 
     private bool IsReversed(int id)
@@ -92,6 +90,13 @@ public class randomObstacle : MonoBehaviour
 
     private void Awake()
     {
+        // ค้นหา Player อัตโนมัติจาก Tag หากไม่ได้ลากใส่ใน Inspector
+        if (playerTarget == null)
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null) playerTarget = playerObj.transform;
+        }
+
         colorGroups = new List<FireHeader[]>
         {
             new FireHeader[] { new FireHeader(firepurple1, 0) },
@@ -116,14 +121,10 @@ public class randomObstacle : MonoBehaviour
             },
         };
 
-        // เตรียมลูกไฟทุกลูก แล้วซ่อนไว้ก่อน
-        string[] headerNames = { "Firepurple1", "Firered1", "Firered2", "Fireblue1", "Fireblue2", "Fireblue3", "Fireblue4", "Firered3", "Firered4", "Firegreen1", "Firegreen2" };
         foreach (FireHeader[] group in colorGroups)
         {
             foreach (FireHeader h in group)
             {
-                int n = (h.fires == null) ? 0 : h.fires.Length;
-                Debug.Log("[randomObstacle] " + headerNames[h.id] + " มีลูกไฟ " + n + " ตัว" + (n == 0 ? "  <-- ว่าง! ต้องลากวัตถุไฟใส่ช่องนี้" : ""));
                 PrepareHeader(h.fires);
             }
         }
@@ -136,8 +137,6 @@ public class randomObstacle : MonoBehaviour
         foreach (GameObject fire in fires)
         {
             if (fire == null) continue;
-
-            // ถ้าลูกไฟตัวไหนมีปัญหา ให้ข้ามตัวนั้นแล้วบอกชื่อใน Console (ไม่ให้ตัวอื่นพังตามไปด้วย)
             try
             {
                 PrepareOne(fire);
@@ -151,7 +150,6 @@ public class randomObstacle : MonoBehaviour
 
     void PrepareOne(GameObject fire)
     {
-        // ต้องมี Collider2D (Trigger) + Rigidbody2D (Kinematic) เพื่อให้ชนผู้เล่นได้
         Collider2D col = fire.GetComponent<Collider2D>();
         if (col == null) col = fire.AddComponent<CircleCollider2D>();
         if (col != null) col.isTrigger = true;
@@ -167,16 +165,14 @@ public class randomObstacle : MonoBehaviour
         FireProjectile proj = fire.GetComponent<FireProjectile>();
         if (proj == null) proj = fire.AddComponent<FireProjectile>();
 
-        proj.Capture();   // จำตำแหน่ง/มุมเริ่มต้น แล้วซ่อน
+        proj.Capture();
     }
 
     private void Start()
     {
-        Debug.Log("[randomObstacle] เริ่มจับเวลา รอยิงรอบแรกใน " + spawnInterval + " วิ");
         StartCoroutine(GameRoutine());
     }
 
-    // ทดสอบสุ่มสี: เล่นเกมอยู่ > คลิกขวาที่ชื่อสคริปต์ randomObstacle > Test Spawn
     [ContextMenu("Test Spawn")]
     void TestSpawn()
     {
@@ -184,7 +180,6 @@ public class randomObstacle : MonoBehaviour
         SpawnColor(colorGroups[PickRandomColor()], -1);
     }
 
-    // ทดสอบทุก Header ของสีฟ้าพร้อมกัน (ดูทิศพุ่งทีเดียว)
     [ContextMenu("Test Spawn All Blue")]
     void TestSpawnAllBlue() { TestAll(2); }
 
@@ -204,7 +199,6 @@ public class randomObstacle : MonoBehaviour
             LaunchHeader(h);
     }
 
-    // ควบคุมเวลาของเกม
     IEnumerator GameRoutine()
     {
         float elapsedTime = 0f;
@@ -251,14 +245,12 @@ public class randomObstacle : MonoBehaviour
             index = Random.Range(0, colorGroups.Count);
             tries++;
         }
-        // ไม่สุ่มสีเดิมซ้ำ และข้ามสีที่ไม่มีลูกไฟเลย (กันรอบที่ไม่ยิงอะไร)
         while (tries < 50 && colorGroups.Count > 1 && (index == lastColor || !HasFires(colorGroups[index])));
 
         lastColor = index;
         return index;
     }
 
-    // สุ่มเลือก Header ในสีที่ได้ แล้วปล่อยไฟพร้อมกันทุกลูก (พารามิเตอร์ที่สองไม่ได้ใช้ ไว้เผื่อขยาย)
     void SpawnColor(FireHeader[] headers, int unused)
     {
         List<FireHeader> available = new List<FireHeader>();
@@ -268,11 +260,7 @@ public class randomObstacle : MonoBehaviour
                 available.Add(h);
         }
 
-        if (available.Count == 0)
-        {
-            Debug.LogWarning("[randomObstacle] สีนี้ไม่มีลูกไฟใน Header เลย (อาร์เรย์ว่าง) ต้องลากวัตถุไฟใส่ช่อง Firexxx");
-            return;
-        }
+        if (available.Count == 0) return;
 
         int min = Mathf.Clamp(minRandomFire, 1, available.Count);
         int max = Mathf.Clamp(maxRandomFire, min, available.Count);
@@ -286,13 +274,11 @@ public class randomObstacle : MonoBehaviour
             available[r] = tmp;
         }
 
-        Debug.Log("[randomObstacle] ยิง! สุ่มได้ " + count + " Header จาก " + available.Count);
-
         for (int i = 0; i < count; i++)
             LaunchHeader(available[i]);
     }
 
-    // ปล่อยลูกไฟทุกลูกใน Header พร้อมกัน
+    // ปล่อยลูกไฟทุกลูกใน Header โดยคำนวณทิศพุ่งเข้าหา Player
     void LaunchHeader(FireHeader header)
     {
         float sign = IsReversed(header.id) ? -1f : 1f;
@@ -304,18 +290,23 @@ public class randomObstacle : MonoBehaviour
             FireProjectile proj = fire.GetComponent<FireProjectile>();
             if (proj == null) continue;
 
-            // ทิศ = หมุนตามมุม z เริ่มต้นของลูกไฟ (กลับทิศถ้าติ๊ก reverse)
-            Vector2 dir = (proj.StartRotation * baseDirection) * sign;
+            Vector2 dir;
+            if (playerTarget != null)
+            {
+                // คำนวณทิศจากจุดเริ่มต้นของลูกไฟชี้ตรงไปที่ตำแหน่งปัจจุบันของ Player
+                dir = ((Vector2)playerTarget.position - (Vector2)proj.StartPosition).normalized * sign;
+            }
+            else
+            {
+                // กรณีหา Player ไม่เจอ ให้ใช้ทิศตามมุมหมุนเดิมเป็นค่าสำรอง
+                dir = (proj.StartRotation * baseDirection) * sign;
+            }
 
-            Debug.Log("[randomObstacle] " + fire.name + " z=" + proj.StartRotation.eulerAngles.z.ToString("F1")
-                      + " ทิศพุ่ง=" + dir.normalized + (sign < 0 ? " (reverse)" : ""));
-
-            proj.Launch(dir, fireSpeed, fireDamage);
+            proj.Launch(dir, fireSpeed, fireDamage, baseDirection);
             activeFires.Add(proj);
         }
     }
 
-    // ซ่อนลูกไฟทั้งหมด และคืนกลับตำแหน่งเดิม
     void ClearFires()
     {
         foreach (FireProjectile fire in activeFires)

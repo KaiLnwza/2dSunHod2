@@ -1,18 +1,17 @@
 ﻿using UnityEngine;
 
-// ติดที่วัตถุลูกไฟแต่ละลูก (randomObstacle เพิ่มให้อัตโนมัติ)
 public class FireProjectile : MonoBehaviour
 {
     private Vector3 startPosition;
     private Quaternion startRotation;
     private Vector2 direction = Vector2.up;
     private float speed = 8f;
-    private int damage = 10;
+    private int damage = 1;
     private bool moving = false;
 
+    public Vector3 StartPosition { get { return startPosition; } }
     public Quaternion StartRotation { get { return startRotation; } }
 
-    // จำตำแหน่งและมุมเริ่มต้น แล้วซ่อนไว้
     public void Capture()
     {
         startPosition = transform.position;
@@ -20,19 +19,24 @@ public class FireProjectile : MonoBehaviour
         Hide();
     }
 
-    // โผล่ที่ตำแหน่งเดิม แล้วพุ่งตรงตามทิศที่ได้รับ
-    public void Launch(Vector2 dir, float spd, int dmg)
+    // โผล่ที่ตำแหน่งเดิม หมุนหัวลูกไฟหันตามทิศทาง แล้วพุ่งไป
+    public void Launch(Vector2 dir, float spd, int dmg, Vector2 spriteForwardDir)
     {
         transform.position = startPosition;
-        transform.rotation = startRotation;
         direction = dir.normalized;
         speed = spd;
         damage = dmg;
+
+        // หมุนหัวลูกไฟให้หันไปทาง Player ตามทิศหัวลูกไฟตั้งต้น (baseDirection)
+        if (direction != Vector2.zero)
+        {
+            transform.rotation = Quaternion.FromToRotation(spriteForwardDir, direction);
+        }
+
         moving = true;
         gameObject.SetActive(true);
     }
 
-    // ซ่อนและคืนตำแหน่งเดิม
     public void Hide()
     {
         moving = false;
@@ -52,7 +56,7 @@ public class FireProjectile : MonoBehaviour
         if (!moving) return;
         if (!other.CompareTag("Player")) return;
 
-        // เรียก TakeDamage(int) ในสคริปต์ผู้เล่น (ถ้ามี)
+        // ลดเลือด Player 1 ดวง (ผ่าน PlayerHealth.TakeDamage(int))
         other.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
 
         Hide();
